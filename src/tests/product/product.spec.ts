@@ -12,6 +12,8 @@ it('should create a new product', async () => {
         }
     });
 
+    expect(response.status).toBe(200);
+
     const data: Product = response.data;
 
     expect(data).toMatchObject({

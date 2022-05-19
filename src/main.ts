@@ -4,7 +4,7 @@ import rateLimit from "express-rate-limit";
 import { config } from "dotenv";
 
 /* Routes */
-import { } from 'routes/index';
+import { routes } from './routes';
 
 /* Configurations */
 config();
@@ -31,5 +31,7 @@ app.use(
 /* Docker configurations */
 const PORT = process.env.PORT || 8080;
 // const HOST = '0.0.0.0';
+
+app.use(routes);
 
 export { app, PORT };
